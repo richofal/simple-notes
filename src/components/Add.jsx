@@ -1,4 +1,9 @@
 function Add({ newNote, setNewNote, addNote }) {
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      addNote();
+    }
+  };
   return (
     <div className="flex justify-center gap-4">
       <span className="">
@@ -8,6 +13,7 @@ function Add({ newNote, setNewNote, addNote }) {
           value={newNote}
           className="border-fuchsia-500 rounded-lg border-2 p-4 text-xl text-white bg-black"
           onChange={(e) => setNewNote(e.target.value)} // Update state saat input berubah
+          onKeyPress={handleKeyPress}
         />
       </span>
       <button
