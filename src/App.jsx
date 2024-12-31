@@ -1,10 +1,14 @@
-import { useState } from "react";
 import "./index.css";
+import Title from "./components/Title";
+import Add from "./components/Add";
+import Notes from "./components/Notes";
 
 function App() {
   return (
     <>
-      <div>Setup Project</div>
+      <Title />
+      <Add />
+      <Notes />
     </>
   );
 }
